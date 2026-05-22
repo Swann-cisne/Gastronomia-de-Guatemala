@@ -1,0 +1,154 @@
+.header-principal {
+    background: linear-gradient(135deg, #091d42 0%, #990000 50%, #ff8c00 100%);
+    color: #fff0d4;            
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 30px;
+}
+
+.enlace-nav {
+    color: #ffcc00;
+    text-decoration: none ;
+    margin: 0 15px;
+    font-size: bold;
+} 
+
+.seccion-tarjetas {
+    text-align: center; 
+}
+
+/* PUNTO 2 y 3: Box Model y Display para las Tarjetas */
+.tarjeta {
+    display: inline-block;    
+    vertical-align: top;
+    width: 300px;             
+    margin: 15px;             /* Margen externo para separarse de las otras */
+    background-color: #fff;
+    border: 1px solid #ddd;   /* Borde solicitado */
+    border-radius: 8px;       /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para estética */
+    text-align: left;
+    min-height: 460px;          /* Esta opcion connecta a el tamaño de la tarjeta con el tamaño de la imagen, para evitar que se vea un espacio vacío debajo de la imagen cuando el contenido es corto */
+}
+
+.tarjeta-img {
+    width: 100%;             
+    height: 180px;
+    object-fit: cover;        /* Evita que la imagen se distorsione o aplaste */
+}
+
+.tarjeta-cuerpo {
+    padding: 20px;            
+}
+
+
+.boton-tarjeta {
+    display: inline-block;    
+    background-color: #d2691e;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Punto 3: Ocultar elemento temporalmente */
+.mensaje-promocional {
+    display: none;
+}
+
+/* 1. Preparamos la tarjeta contenedora */
+.tarjeta-destacada {
+    position: relative; /* Se vuelve el plano de referencia de sus hijos */
+}
+
+/* 2. Posicionamos la etiqueta dorada */
+.etiqueta-popular {
+    position: absolute;
+    top: 10px;           /* 10 pixeles desde el borde superior de la tarjeta */
+    left: 10px;          /* 10 pixeles desde el borde izquierdo */
+    background-color: #ffcc00;
+    color: black;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* PUNTO 4: Uso de propiedades Position (Botón Ir Arriba) */
+.boton-ir-arriba {
+    position: fixed;
+    bottom: 20px;       /* Anclado a 20px del fondo de la pantalla */
+    right: 20px;        /* Anclado a 20px de la derecha de la pantalla */
+    background-color: #8B0000;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 1000;      
+}
+/* PUNTO 5: Experimento de Especificidad CSS */
+.seccion-especificidad p {
+    color: gray;
+    font-style: italic;
+}
+
+.seccion-especificidad .texto-destacado {
+    color: blue;
+}
+
+#mi-favorito {
+    color: #8B0000; 
+    font-weight: bold;
+}
+/* PUNTO 6: Sección informativa adicional */
+.seccion-adicional {
+    background-color: #e8ddbc;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+.boton-adicional {
+    background-color: transparent;
+    color: #8B0000;
+    border: 2px solid #8B0000;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+
+.boton-adicional:hover {
+    background-color: #8B0000;
+    color: white;
+}
+
+.pie-pagina {
+    background-color: #333333; 
+    color: #ffffff;            
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.lista-curiosidades {
+    text-align: left;       
+    margin: 20px auto;      
+    max-width: 800px;       
+    padding-left: 20px;     
+}
+
+.lista-curiosidades li {
+    margin-bottom: 20px;    
+    font-size: 1.05rem;     
+    color: #091d42;        
+}
+
+.lista-curiosidades strong {
+    color: #990000;         
+}
